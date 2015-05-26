@@ -1,0 +1,32 @@
+{
+  "name": "iconfont-loader",
+  "version": "0.0.0",
+  "author": "Jussi Kalliokoski <jussi.kalliokoski@gmail.com> (http://juss.in)",
+  "description": "Webpack loader for icons, converting them into iconfonts.",
+  "license": "ISC",
+  "keywords": [
+    "svg",
+    "font",
+    "icon",
+    "webpack"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:jussi-kalliokoski/iconfont-loader.git"
+  },
+  "main": "index.js",
+  "files": [
+    "IconFontPlugin.js",
+    "template.js",
+    "index.js"
+  ],
+  "scripts": {
+    "test": "true"
+  },
+  "dependencies": {
+    "gulp-iconfont": "^1.0.1",
+    "loader-utils": "^0.2.9",
+    "vinyl": "^0.4.6",
+    "webpack-core": "^0.6.5"
+  }
+}
