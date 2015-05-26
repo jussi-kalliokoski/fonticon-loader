@@ -24,6 +24,7 @@
     "test": "true"
   },
   "dependencies": {
+    "enhanced-resolve": "^0.8.6",
     "gulp-iconfont": "^1.0.1",
     "loader-utils": "^0.2.9",
     "vinyl": "^0.4.6",
