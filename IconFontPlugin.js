@@ -20,12 +20,10 @@ function jsonDependency (objectFactory) {
 }
 
 function IconFontPlugin (options) {
-    options = options || {};
-    this.options = {
-        fontName: options.fontName || "myfont",
-        filenameTemplate: options.filenameTemplate || {
-            name: "[name]-[hash].[ext]",
-        },
+    this.options = options || {};
+    this.options.fontName =  options.fontName || "myfont";
+    this.options.filenameTemplate = options.filenameTemplate || {
+        name: "[name]-[hash].[ext]",
     };
 
     this.codepoints = [];
