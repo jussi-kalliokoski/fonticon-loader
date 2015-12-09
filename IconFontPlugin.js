@@ -87,6 +87,9 @@ IconFontPlugin.prototype.apply = function (compiler) {
                     return module.rawRequest === "iconfont-loader";
                 })[0];
 
+                global.FONTICONPLUGIN_CODEPOINTS = plugin.codepoints;
+                global.FONTICONPLUGIN_STYLES = plugin.styles;
+
                 compilation.rebuildModule(module, callback);
             });
 
