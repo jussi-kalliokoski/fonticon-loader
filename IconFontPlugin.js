@@ -20,12 +20,10 @@ function jsonDependency (objectFactory) {
 }
 
 function IconFontPlugin (options) {
-    options = options || {};
-    this.options = {
-        fontName: options.fontName || "myfont",
-        filenameTemplate: options.filenameTemplate || {
-            name: "[name]-[hash].[ext]",
-        },
+    this.options = options || {};
+    this.options.fontName =  options.fontName || "myfont";
+    this.options.filenameTemplate = options.filenameTemplate || {
+        name: "[name]-[hash].[ext]",
     };
 
     this.codepoints = [];
@@ -88,6 +86,9 @@ IconFontPlugin.prototype.apply = function (compiler) {
                 var module = modules.filter(function (module) {
                     return module.rawRequest === "iconfont-loader";
                 })[0];
+
+                global.FONTICONPLUGIN_CODEPOINTS = plugin.codepoints;
+                global.FONTICONPLUGIN_STYLES = plugin.styles;
 
                 compilation.rebuildModule(module, callback);
             });
